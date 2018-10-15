@@ -8,7 +8,7 @@ from .models import FormModel
 def index(request):
     posts = FormModel.objects.all()
     context = {'posts': posts}
-    return render(request, 'forms_app/post_detail.html', context)
+    return render(request, 'forms_app/post_list.html', context)
 
 
 def post_detail(request, pk):
